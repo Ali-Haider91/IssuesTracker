@@ -89,13 +89,13 @@ router.get('/', async (req, res) => {
         const filters = {};
 
         if (priority) {
-            filters.priority = {$regex:priority ,$options:"i",}
+            filters.priority = {$regex:priority ,$options:"i"}
         }
         if (date) {
-            filters.date = {$regex:date ,$options:"i",}
+            filters.date = date
         }
         if (status) {
-            filters.status = {$regex:status ,$options:"i",}
+            filters.status = {$regex:status ,$options:"i"}
         }
         console.log(filters)
 
